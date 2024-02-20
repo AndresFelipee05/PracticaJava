@@ -12,7 +12,7 @@
 
     <label><button onclick="Pedir()">Calcular la nota</button></label><br><br>
     <label><button onclick="PedirPromedio()">Saber Promedio</button></label><br><br>
-    <label><button onclick="Pedir3()">Decir si es menor de 10</button></label>
+    <label><button onclick="Pedir3()">Decir si es menor de 10</button></label><br><br>
 
     <script>
     function Pedir(){
@@ -95,7 +95,20 @@
         }
     }
 
+    function notaFormualrio(){
+        let nota = document.getElementById("nota").value
+
+        let calcular = Nota(nota)
+
+    }
     </script>
+
+    Nota: <input type="number"  id="nota" value="10" min="0" max="10">
+    <button onclick="notaFormualrio()">Calcular nota</button>
+    <p id="display">
+
+    </p>
+
     
 </body>
-</html>
+</html>    
