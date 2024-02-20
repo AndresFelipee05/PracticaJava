@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1>Buenos días</h1>
+
+    <label><button onclick="Pedir()">Calcular la nota</button></label><br><br>
+    <label><button onclick="PedirPromedio()">Saber Promedio</button></label><br><br>
+    <label><button onclick="Pedir3()">Decir si es menor de 10</button></label>
+
+    <script>
+    function Pedir(){
+        let n1 = prompt ('Dime tu nota')
+
+        let Califi = Nota(n1);
+
+    }   
+
+    function Nota(nota){
+     
+    if (nota >= 0 && nota < 3) {
+        alert("Muy deficiente");
+
+    } else if (nota >= 3 && nota < 5) {
+        alert("Insuficiente");
+
+    } else if (nota >= 5 && nota < 6) {
+        alert("Suficiente");
+
+    } else if (nota >= 6 && nota < 7) {
+        alert("Bien");
+
+    } else if (nota >= 7 && nota < 9) {
+        alert("Notable");
+
+    } else if (nota >= 9 && nota <= 10) {
+        alert("Sobresaliente");
+
+    } else {
+        alert("La nota ingresada no es válida");
+}
+    }
+
+
+    function Pedir3(){
+        let n1 = prompt ('Dime un numero');
+        let n2 = prompt ('Dime otro numero');
+        let n3 = prompt ('Dime otro más');
+
+        let Elegir = Numeros(n1,n2,n3);
+    }
+
+    function Numeros(n1,n2,n3){
+
+        if(n1<10 || n2<10 || n3<10){
+            alert('Alguno de los números es menor de 10')
+        }
+
+    }
+
+    function PedirPromedio(){
+        let n1 = prompt ('Dime la primera nota');
+        while(n1<0 || n1>10){
+            n1 = prompt ('Error, Dime la primera nota');
+        }
+
+        let n2 = prompt ('Dime la segunda nota');
+        while(n2<0 || n2>10){
+            n2 = prompt ('Error, Dime la segunda nota');
+        }
+        
+        let n3 = prompt ('Dime la tercera nota');
+        while(n3<0 || n3    >10){
+            n3 = prompt ('Error, Dime la tercera nota');
+        }
+        
+
+        let Media = Promedio(n1,n2,n3)
+    }
+
+    function Promedio(n1,n2,n3){
+
+        let media = (Number(n1),Number(n2),Number(n3))/3
+
+        if (media>=5){
+            alert('Promocionado')
+        } else {
+            alert ('No promociona')
+        }
+    }
+
+    </script>
+    
+</body>
+</html>
